@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class IncomeManager {
 
+	
+	private int MAX_FILE_CONTENTS = 20;
 	private int[] fileContents;
 	
 	private int readLine(Scanner reader) {
@@ -16,7 +18,7 @@ public class IncomeManager {
 	
 	public void readFile(Scanner reader) {
 		int i = 0;
-		fileContents = new int[10];
+		fileContents = new int[MAX_FILE_CONTENTS];
 		while(reader.hasNextLine()) {
 			fileContents[i] = readLine(reader);
 			i++;
